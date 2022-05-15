@@ -1,0 +1,95 @@
+.containerMenu {
+	margin: 0 auto;
+}
+
+ul.menu,ul.menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background: #4E76BC;
+	color:white;
+}
+
+ul.menu a {
+	display: block;
+	text-decoration: none;
+	text-align: left;
+}
+
+ul.menu li {
+	
+}
+
+ul.menu li a,ul.menu ul.menu li a {
+	padding: 0.5em;
+	/*  
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;*/
+	color: #000;
+	border: solid 1px #4E76BC;
+	background: #70A9FF;
+}
+
+ul.menu li a:hover,ul.menu ul.menu li a:hover {
+	background: #FFF;
+}
+
+ul.menu li ul li a,ul.menu ul.menu li ul li a {
+	color: #000;
+	padding-left: 20px;
+	background: #99DDFF;
+}
+
+ul.menu li ul li a:hover,ul.menu ul.menu li ul li a:hover {
+	background: #FFF;
+	border-left: 5px #4E76BC solid;
+	padding-left: 15px;
+}
+
+ul.menu ul.menu li a:hover {
+	border-left: 0;
+	padding-left: 0.5em;
+}
+
+ul.menu ul.menu {
+	border-left: 5px #f00 solid;
+}
+
+ul.menu a.active,ul.menu ul.menu li a.active,ul.menu a.active:hover,ul.menu ul.menu li a.active:hover
+	{
+	text-decoration: none;
+	color: #faddde;
+	border: solid 1px #980c10;
+	background: #4E76BC;
+}
+
+div.panel {
+	border: 1px #000 solid;
+	padding: 5px;
+	margin-top: 1px;
+}
+
+ul.menu div.panel a,ul.menu div.panel li a:hover {
+	display: inline;
+	color: #666;
+	background: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-weight: bold;
+}
+
+ul.menu div.panel a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+a.back {
+	color: #777;
+	font-size: 0.8em;
+	position: fixed;
+	bottom: 20px;
+	left: 10px;
+	text-decoration: none;
+}

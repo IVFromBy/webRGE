@@ -1,0 +1,34 @@
+﻿@using webRGE.ViewModels
+@using webRGE.Entities.Enum
+
+@model TabelNamesViewModel
+@{
+    ViewBag.Title = "Импорт данных в базу";
+}
+<div class="container">
+    <div>
+        <form asp-action="Load" asp-controller="Home" method="post" enctype="multipart/form-data">
+            <span style="color:red">!!! Перед импортом, в выбранную таблицу, произойдёт очистка таблицы!</span>
+            
+            <p>
+                <div>
+                    <label asp-for="TabelNames">Список обрабатываемых таблиц</label>
+                    <select asp-for="TabelNames" asp-items="Html.GetEnumSelectList<TabelNames>()"></select>
+                </div>
+            </p>
+            <p>
+                <label>Файл для импорта</label>
+                <input name="tn" type="file" class="form-control" multiple/>
+            </p>
+            <p>
+                <input type="submit" value="Добавить" />
+            </p>
+            <br />
+             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+             @*<div id="progress" class="progress"><div id="bar" class="bar"></div><div id="label" class="label">0%</div></div>*@
+            <span style="color:green">@Html.Raw(ViewBag.Message)</span>
+        </form>
+
+    </div>
+    
+</div>

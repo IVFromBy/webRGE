@@ -1,0 +1,65 @@
+﻿@model webRGE.ViewModels.Egr01NameViewModel
+
+<div class="container">
+    <div>
+        <fieldset class="duration-200 ease-in-out">
+            <form class="mt-6 mb-12">
+                <div class="relative mb-4" placeholder="XXXXXXXXX (9 цифр). Например: 123456789">
+                    <label class="leading-7 text-base text-gray-800"> Регистрационный номер </label>
+                    <input name="RegNum" placeholder="XXXXXXXXX (9 цифр). Например: 123456789" class="w-full bg-white rounded border border-gray-500 text-base outline-none text-gray-800 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out focus:border-blue-600">
+                </div>
+
+                <div class="relative mb-4" placeholder="Введите наименование. Например: Ромашка">
+                    <label class="leading-7 text-base text-gray-800"> Наименование юридического лица/фамилия, имя, отчество индивидуального предпринимателя </label>
+                    <input type="text" name="SearchName" placeholder="Введите наименование. Например: Ромашка" class="w-full bg-white rounded border border-gray-500 text-base outline-none text-gray-800 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out focus:border-blue-600"><!---->
+                </div>
+
+                <div class="text-xs"><p class="mb-1"></div>
+                <div class="flex justify-center mt-8">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 border-0 text-white py-2 px-6 rounded"> Поиск </button>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+
+
+    @if (@Model.RegisterdUsers is not null)
+    {
+        <table data-v-1aee17f6="" class="mb-6">
+            <thead data-v-1aee17f6="">
+                <tr data-v-1aee17f6="">
+                    <th data-v-1aee17f6="">УНП</th>
+                    <th data-v-1aee17f6="">Наименование юридического лица/Ф.И.О. индивидуального предпринимателя </th>
+                    <th data-v-1aee17f6="">Дата регистрации</th>
+                    <th data-v-1aee17f6="">Состояние</th>
+                    <th data-v-1aee17f6="">Дата исключения из ЕГР (прекращения деятельности в связи с реорганизацией) </th>
+                    <th data-v-1aee17f6=""></th>
+                </tr>
+            </thead>
+
+            @foreach (var item in @Model.RegisterdUsers)
+            {
+                
+                <tbody data-v-1aee17f6="">
+                    <tr data-v-1aee17f6="">
+                        
+                        <td data-v-1aee17f6="">@item.NGRN</td>
+                        <td data-v-1aee17f6=""><p data-v-1aee17f6="">@if (!string.IsNullOrEmpty( @item.VFIO)){@item.VFIO}else{@item.VN}</p></td>
+                        
+                        <td data-v-1aee17f6="">
+                            <p data-v-1aee17f6="">@if(@item.DFROM.HasValue ){@item.DFROM.Value.ToString("dd.MM.yyyy")}</p>
+                         </td>
+                        <td data-v-1aee17f6="">@item.VNSOSTK</td>
+
+                         <td data-v-1aee17f6="">@if(@item.DTO.HasValue ){@item.DTO.Value.ToString("dd.MM.yyyy") }</td>
+                        <td data-v-1aee17f6="">
+                            <a data-v-1aee17f6="" href=# target="_blank" class="mb-3"> Дополнительная информация по субъекту </a>
+                        </td>
+                        </tr>
+                </tbody>
+                
+            }
+
+        </table>
+    }
+</div>

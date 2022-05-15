@@ -1,0 +1,206 @@
+﻿<link rel="stylesheet" crossorigin="anonymous">
+<link type="text/css" rel="stylesheet" href="~/css/index.css">
+<link type="text/css" rel="stylesheet" href="~/css/style.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" type="text/css" href="~/css/menu.css">
+
+<style>
+    /*Popup Window*/
+    .header {
+        height: 245px;
+        padding: 30px 0;
+    }
+
+        .header [class*='col-'] {
+            height: 100%;
+            position: relative;
+        }
+
+            .header [class*='col-']:nth-child(odd) *,
+            .header .col-1-2 a {
+                position: absolute;
+                top: 50%;
+                left: 43%;
+                transform: translate(-50%, -50%);
+            }
+
+            .header [class*='col-']:nth-child(2) {
+                text-align: center;
+                vertical-align: middle;
+            }
+
+                .header [class*='col-']:nth-child(2) a {
+                    color: #fff;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+                }
+
+        .header .col-1-2 a:hover {
+            text-decoration: none;
+        }
+
+        .header .col-1-2 a p {
+            margin: 0;
+        }
+
+            .header .col-1-2 a p:nth-child(2) {
+                font-size: 30px;
+                margin: 10px 0;
+            }
+
+        .header .align-right {
+            white-space: nowrap;
+        }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .auth-icon {
+        padding-left: 30px
+    }
+
+    .header .auth-text {
+        margin-top: 25px;
+    }
+
+    .header [class*='col-']:last-child .right-container {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+        .header [class*='col-']:last-child .right-container:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+
+    .header [class*='col-']:last-child a {
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    .icon {
+        font-size: 20px;
+        padding-left: 10px;
+        cursor: pointer;
+    }
+
+        .icon:hover {
+            text-decoration: none;
+        }
+
+    .black_overlay5 {
+        display: none;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: 1001;
+        opacity: .60;
+    }
+
+    .white_content5 {
+        display: none;
+        position: fixed;
+        top: 45%;
+        left: 40%;
+        width: 20%;
+        padding: 16px;
+        border: 16px solid orange;
+        background-color: white;
+        z-index: 1002;
+        overflow: auto;
+    }
+
+
+
+    .align-right {
+        text-align: right;
+    }
+
+    .selectLanguage {
+        font-size: 14px;
+        color: white;
+        padding-left: 10px;
+    }
+
+        .selectLanguage:hover {
+            font-size: 14px;
+            color: white;
+        }
+
+    #auth-id-card {
+        white-space: nowrap;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+        #auth-id-card:hover {
+            cursor: pointer;
+        }
+
+    #authorization {
+        position: relative;
+    }
+
+        #authorization div {
+            position: absolute;
+            display: none;
+            bottom: 0;
+            right: 128px;
+            width: 700px;
+            padding: 16px;
+            background-color: #fff;
+            border: 1px solid #000;
+            border-radius: 4px;
+        }
+
+            #authorization a:hover + div,
+            #authorization div:hover {
+                display: block;
+            }
+
+            #authorization div p {
+                white-space: normal;
+                margin: 0;
+                text-align: left;
+            }
+
+                #authorization div p a {
+                    color: #167CC4;
+                    text-transform: capitalize;
+                }
+
+</style>
+<style>
+    #borderBottomMenu {
+        margin: 25px;
+    }
+
+    .main-menu {
+        height: 85px;
+    }
+
+    .simple-menu {
+        height: 150px;
+    }
+
+        .simple-menu .sub-menu {
+            z-index: 1000;
+        }
+
+    .old-menu {
+        height: 85px
+    }
+    input{font-size: 15px}.w-full{width: 350px}
+</style>

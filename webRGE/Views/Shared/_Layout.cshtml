@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Поиск РГЕ</title>
+    <partial name="Partial/_Styles" />
+    @await RenderSectionAsync("Styles",false)
+</head>
+
+<body>
+    <div id="container" class="container">
+        <div id="header">
+
+            <div class="grid header">
+                @*
+                <div class="col-1-4">
+                    <img src="~/images/newgerb2.png" style="width: 120px;">
+                </div>
+                <div class="col-1-2">
+
+                    <p>Министерство юстиции Республики Беларусь</p>
+                    <p><b>Единый государственный регистр</b></p>
+                    <p><b>юридических лиц и индивидуальных предпринимателей</b></p>
+
+                </div>
+                <div class="col-1-8">
+                    <img src="~/images/456.png">
+                </div>
+                *@
+            </div>
+
+        </div>
+        <div id="sidebar">
+            <div id="main-menu" class="old-menu">
+                <ul id="sdt_menu" class="sdt_menu">
+                    <li>
+                        <a asp-controller="Home" asp-action="Index">
+                            <img src="~/images/law0.jpg"> <span class="sdt_active"></span>
+                            <span class="sdt_wrap">
+                                <span class="sdt_link" style=" text-align: center; margin-top: -10px;">Поиск</span>
+                                <span class="sdt_descr"></span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Import">
+                            <img src="~/images/infoFromEgr0.png">
+                            <span class="sdt_active"></span>
+                            <span class="sdt_wrap"> <span class="sdt_link" style=" text-align: center;     margin-top: -10px;">Импорт</span> <span class="sdt_descr"></span></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+            </div>
+
+        </div>
+
+
+        <div id="content" class="content">
+            <div id="app" class="p-12">
+                <p />
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <partial name="Partial/_Scripts" />
+    @await RenderSectionAsync("Scripts",false)
+</body>
+</html>
