@@ -25,7 +25,7 @@
 
     @if (@Model.RegisterdUsers is not null)
     {
-        <table data-v-1aee17f6="" class="mb-6">
+        <table data-v-1aee17f6="" class="table table-bordered">
             <thead data-v-1aee17f6="">
                 <tr data-v-1aee17f6="">
                     <th data-v-1aee17f6="">УНП</th>
@@ -53,7 +53,7 @@
 
                          <td data-v-1aee17f6="">@if(@item.DTO.HasValue ){@item.DTO.Value.ToString("dd.MM.yyyy") }</td>
                         <td data-v-1aee17f6="">
-                            <a data-v-1aee17f6="" href=# target="_blank" class="mb-3"> Дополнительная информация по субъекту </a>
+                            <a data-v-1aee17f6="" asp-action="Index" asp-controller="Report" asp-route-RegNum ="@item.NGRN" target="_blank" class="mb-3"> Дополнительная информация по субъекту </a>
                         </td>
                         </tr>
                 </tbody>

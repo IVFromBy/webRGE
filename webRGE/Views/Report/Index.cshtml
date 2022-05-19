@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Отчёты";
+}
+@model int?
+<div>
+    <p><strong>Отчёты</strong></p>
+    <form class="mt-6 mb-12">
+        <div class="relative mb-4" placeholder="XXXXXXXXX (9 цифр). Например: 123456789">
+            <label class="leading-7 text-base text-gray-800"> Регистрационный номер </label>
+            <input name="RegNum" placeholder="XXXXXXXXX (9 цифр). Например: 123456789" 
+            class="w-full bg-white rounded border border-gray-500 text-base outline-none text-gray-800 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out focus:border-blue-600"
+            value=@Model>
+        </div>
+
+    </form>
+    <p>Доступные отчёты</p>
+                    <div class="text-xs"><p class="mb-1"></div>
+                <div class="flex justify-center mt-8">
+                    
+                    <p><a data-v-1aee17f6="" asp-action="HistoryStatus" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> История изменения статуса </a></p>
+                    <p><a data-v-1aee17f6="" asp-action="HistoryName" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> История изменения наименования </a></p>
+                    
+                </div>
+</div>

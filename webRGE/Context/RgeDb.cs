@@ -66,6 +66,9 @@ namespace webRGE.Context
 
         #region reports
         public DbSet<MainSearch> MainSearchs { get; set; }
+        public DbSet<HistoryStatus> HistoryStatusReport { get; set; }
+        public DbSet<HistoryName> HistoryNameReport { get; set; }
+
         #endregion
 
         public RgeDb(DbContextOptions<RgeDb> options) : base(options)

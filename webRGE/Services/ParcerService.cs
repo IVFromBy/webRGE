@@ -157,7 +157,7 @@ namespace webRGE.Services
             {
                 DataRow dr = dt.NewRow();
 
-                for (int i = 0; i < dt.Columns.Count - 1; i++)
+                for (int i = 0; i < dt.Columns.Count ; i++)
                 {
                     dr[i] = properties[i].GetValue(items);
                 }

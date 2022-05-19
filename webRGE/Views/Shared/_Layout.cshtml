@@ -43,10 +43,17 @@
                         </a>
                     </li>
                     <li>
-                        <a asp-action="Import">
+                        <a asp-controller="Home" asp-action="Import">
                             <img src="~/images/infoFromEgr0.png">
                             <span class="sdt_active"></span>
                             <span class="sdt_wrap"> <span class="sdt_link" style=" text-align: center;     margin-top: -10px;">Импорт</span> <span class="sdt_descr"></span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Report" asp-action="Index">
+                            <img src="~/images/">
+                            <span class="sdt_active"></span>
+                            <span class="sdt_wrap"> <span class="sdt_link" style=" text-align: center;     margin-top: -10px;">Отчёты</span> <span class="sdt_descr"></span></span>
                         </a>
                     </li>
                 </ul>

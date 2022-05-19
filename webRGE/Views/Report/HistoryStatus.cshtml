@@ -1,0 +1,39 @@
+﻿
+@model webRGE.ViewModels.HistoryStatusViewModel
+@{
+    ViewBag.Title = "Отчёт: история изменения статуса";
+}
+<p>Отчёт: история изменения статуса</p>
+  <table data-v-1aee17f6="" class="table table-bordered">
+            <thead data-v-1aee17f6="">
+                <tr data-v-1aee17f6="">
+                    <th data-v-1aee17f6="">DFROM</th>
+                    <th data-v-1aee17f6="">VNOP</th>
+                    <th data-v-1aee17f6="">DDOC</th>
+                    <th data-v-1aee17f6="">VNUZKD</th>
+                    <th data-v-1aee17f6="">VNUZKR</th>
+                    <th data-v-1aee17f6="">VNUZK</th>
+                    <th data-v-1aee17f6="">VNOSN</th>
+                    <th data-v-1aee17f6="">VNOPD</th>
+                </tr>
+            </thead>
+            
+            @foreach (var item in @Model.Report)
+            {
+                
+                <tbody data-v-1aee17f6="">
+                    <tr data-v-1aee17f6="">
+                        <td data-v-1aee17f6="">@item.DFROM.ToString("dd.MM.yyyy")</td>
+                        <td data-v-1aee17f6="">@item.VNOP</td>
+                        <td data-v-1aee17f6="">@if(@item.DDOC.HasValue ){@item.DDOC.Value.ToString("dd.MM.yyyy")}</td>
+                        <td data-v-1aee17f6="">@item.VNUZKD</td>
+                        <td data-v-1aee17f6="">@item.VNUZKR</td>
+                        <td data-v-1aee17f6="">@item.VNUZK</td>
+                        <td data-v-1aee17f6="">@item.VNOSN</td>                                                                      
+                        <td data-v-1aee17f6="">@item.VNOPD</td>
+                        </tr>
+                </tbody>
+                
+            }
+
+        </table>
