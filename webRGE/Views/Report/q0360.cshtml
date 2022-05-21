@@ -1,0 +1,55 @@
+﻿
+@model webRGE.ViewModels.q0360ViewModel
+@{
+    ViewBag.Title = "Отчёт: Паспортные данные";
+}
+<p>Отчёт: Паспортные данные</p>
+  <table data-v-1aee17f6="" class="table table-bordered">
+            <thead data-v-1aee17f6="">
+                <tr data-v-1aee17f6="">
+                    <th data-v-1aee17f6="">C</th>
+                    <th data-v-1aee17f6="">ПО</th>
+                    <th data-v-1aee17f6="">VFIO </th>
+                    <th data-v-1aee17f6="">VFIOB </th>
+                    <th data-v-1aee17f6="">VNVDOK </th>
+                    <th data-v-1aee17f6="">VDOCSER </th>
+                    <th data-v-1aee17f6=""> VDOCNUM</th>
+                    <th data-v-1aee17f6="">DDOC </th>
+                    <th data-v-1aee17f6="">DDOCEND </th>
+                    <th data-v-1aee17f6="">VDOCORG </th>
+                    <th data-v-1aee17f6="">CLN </th>
+                    <th data-v-1aee17f6="">NPOL </th>
+                    <th data-v-1aee17f6="">DR </th>
+                    <th data-v-1aee17f6="">VMR </th>
+                    <th data-v-1aee17f6="">VPRIM </th>
+                    
+                   
+                </tr>
+            </thead>
+            @foreach (var item in @Model.Report)
+            {
+                
+                <tbody data-v-1aee17f6="">
+                    <tr data-v-1aee17f6="">
+                        <td data-v-1aee17f6="">@item.DFROM.ToString("dd.MM.yyyy")</td>
+                        <td data-v-1aee17f6="">@if(@item.DTO.HasValue ){@item.DTO.Value.ToString("dd.MM.yyyy")}</td>
+                        <td data-v-1aee17f6="">@item.VFIO </td>  
+                        <td data-v-1aee17f6="">@item.VFIOB </td>  
+                        <td data-v-1aee17f6="">@item.VNVDOK </td>  
+                        <td data-v-1aee17f6="">@item.VDOCSER </td>  
+                        <td data-v-1aee17f6="">@item.VDOCNUM </td>  
+                        <td data-v-1aee17f6="">@if(@item.DDOC.HasValue ){@item.DDOC.Value.ToString("dd.MM.yyyy")}</td>  
+                        <td data-v-1aee17f6="">@if(@item.DDOCEND.HasValue ){@item.DDOCEND.Value.ToString("dd.MM.yyyy")} </td>  
+                        <td data-v-1aee17f6="">@item.VDOCORG </td>  
+                        <td data-v-1aee17f6="">@item.CLN </td>  
+                        <td data-v-1aee17f6="">@item.NPOL </td>  
+                        <td data-v-1aee17f6="">@if(@item.DR.HasValue ){@item.DR.Value.ToString("dd.MM.yyyy")} </td>  
+                        <td data-v-1aee17f6="">@item.VMR </td>  
+                        <td data-v-1aee17f6="">@item.VPRIM </td>  
+
+                        </tr>
+                </tbody>
+                
+            }
+
+        </table>

@@ -5,10 +5,9 @@
 <div>    
     <form class="mt-6 mb-12">
         @if(@Model != null)
-        {<p><strong>Отчёты для </strong></p>
+        {
             <div class="relative mb-4">
-                <label class="leading-7 text-base text-gray-800"> Регистрационный номер </label>
-            <label name="RegNum" >@Model</label>
+                <label class="leading-7 text-base text-gray-800">Отчёты для рге. номер - @Model</label>            
           </div>
         }
         else
@@ -24,15 +23,24 @@
         <p><a data-v-1aee17f6="" asp-action="HistoryName" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> История изменения наименования </a></p>
         <p><a data-v-1aee17f6="" asp-action="HistoryManager" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> История изменения управленцев </a></p>
         <p><a data-v-1aee17f6="" asp-action="ActivityTypeMain" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> Вид основной деятельности</a></p>
+        <p><a data-v-1aee17f6="" asp-action="q0303" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> Филиалы/дочернии фирмы</a></p>
         <p><a data-v-1aee17f6="" asp-action="ActivityType" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> Виды деятельности</a></p>
         <p><a data-v-1aee17f6="" asp-action="ActivityTypeExt" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> Виды деятельности (Дополнительные) </a></p>
         <p><a data-v-1aee17f6="" asp-action="ActivityTypeExt2" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> Виды деятельности (Дополнительные №2) </a></p>
         <p><a data-v-1aee17f6="" asp-action="ActivityTypeExt3" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> Виды деятельности (Дополнительные №3) </a></p>
-        <p><a data-v-1aee17f6="" asp-action="SocNum" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> Соц номера (для ип) </a></p>
+        <p><a data-v-1aee17f6="" asp-action="q0358" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3">Уставный фонд</a></p>
+        <p><a data-v-1aee17f6="" asp-action="q0321" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3">Регистрация (прописка\расположение главного здания)</a></p>
 <br/>
+<p>Для ИП/ЧП</p>
+ <p><a data-v-1aee17f6="" asp-action="SocNum" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> Соц номера</a></p>
+ <p><a data-v-1aee17f6="" asp-action="q0360" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> Паспортные данные</a></p>
+
 <p>Отчёты с непонятным содержанием</p>
+        <p><a data-v-1aee17f6="" asp-action="q0301" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> q0301 (какие-то деньги)</a></p>
         <p><a data-v-1aee17f6="" asp-action="q0313" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> q0313</a></p>
-        <p><a data-v-1aee17f6="" asp-action="q0355" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> q0355</a></p>
         <p><a data-v-1aee17f6="" asp-action="q0331" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> q0331</a></p>
+        <p><a data-v-1aee17f6="" asp-action="q0355" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> q0355</a></p>
+        <p><a data-v-1aee17f6="" asp-action="q0357" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> q0357</a></p>
+        
     </div>
 </div>

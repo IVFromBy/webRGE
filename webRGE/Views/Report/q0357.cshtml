@@ -1,0 +1,40 @@
+﻿
+@model webRGE.ViewModels.q0357ViewModel
+@{
+    ViewBag.Title = "Отчёт: q0357";
+}
+<p>Отчёт: q0337</p>
+  <table data-v-1aee17f6="" class="table table-bordered">
+            <thead data-v-1aee17f6="">
+                <tr data-v-1aee17f6="">
+                    <th data-v-1aee17f6="">C</th>
+                    <th data-v-1aee17f6="">ПО</th>
+                    <th data-v-1aee17f6="">VNOPFP</th>
+                    <th data-v-1aee17f6="">VNFOPF</th>                     
+                    <th data-v-1aee17f6="">VNVFSP</th>                     
+                    <th data-v-1aee17f6="">VNFFSP</th>                     
+                    <th data-v-1aee17f6="">VKOKOGUP</th>                     
+                    <th data-v-1aee17f6="">VNFOKOGU</th>                     
+                   
+                </tr>
+            </thead>
+            
+            @foreach (var item in @Model.Report)
+            {
+                
+                <tbody data-v-1aee17f6="">
+                    <tr data-v-1aee17f6="">
+                        <td data-v-1aee17f6="">@item.DFROM.ToString("dd.MM.yyyy")</td>
+                        <td data-v-1aee17f6="">@if(@item.DTO.HasValue ){@item.DTO.Value.ToString("dd.MM.yyyy")}</td>
+                        <td data-v-1aee17f6="">@item.VNOPFP</td>  
+                        <td data-v-1aee17f6="">@item.VNFOPF</td>
+                        <td data-v-1aee17f6="">@item.VNVFSP</td>
+                        <td data-v-1aee17f6="">@item.VNFFSP</td>
+                        <td data-v-1aee17f6="">@item.VKOKOGUP</td>
+                        <td data-v-1aee17f6="">@item.VNFOKOGU</td>
+                        </tr>
+                </tbody>
+                
+            }
+
+        </table>

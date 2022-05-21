@@ -132,5 +132,59 @@ namespace webRGE.Controllers
 
             return View(model);
         }
+        public async Task<IActionResult> q0357(int? ngr)
+        {
+            if (ngr == null) return RedirectToAction("Index", "Report");
+
+            var model = new q0357ViewModel();
+            model.Report = await _db.q0357Report.FromSqlRaw("exec q0357 @ngr={0}", ngr).ToListAsync();
+
+            return View(model);
+        }
+        public async Task<IActionResult> q0303(int? ngr)
+        {
+            if (ngr == null) return RedirectToAction("Index", "Report");
+
+            var model = new q0303ViewModel();
+            model.Report = await _db.q0303Report.FromSqlRaw("exec q0303 @ngr={0}", ngr).ToListAsync();
+
+            return View(model);
+        }
+        public async Task<IActionResult> q0360(int? ngr)
+        {
+            if (ngr == null) return RedirectToAction("Index", "Report");
+
+            var model = new q0360ViewModel();
+            model.Report = await _db.q0360Report.FromSqlRaw("exec q0360 @ngr={0}", ngr).ToListAsync();
+
+            return View(model);
+        }
+        public async Task<IActionResult> q0301(int? ngr)
+        {
+            if (ngr == null) return RedirectToAction("Index", "Report");
+
+            var model = new q0301ViewModel();
+            model.Report = await _db.q0301Report.FromSqlRaw("exec q0301 @ngr={0}", ngr).ToListAsync();
+
+            return View(model);
+        }
+        public async Task<IActionResult> q0358(int? ngr)
+        {
+            if (ngr == null) return RedirectToAction("Index", "Report");
+
+            var model = new q0358ViewModel();
+            model.Report = await _db.q0358Report.FromSqlRaw("exec q0358 @ngr={0}", ngr).ToListAsync();
+
+            return View(model);
+        }
+        public async Task<IActionResult> q0321(int? ngr)
+        {
+            if (ngr == null) return RedirectToAction("Index", "Report");
+
+            var model = new q0321ViewModel();
+            model.Report = await _db.q0321Report.FromSqlRaw("exec q0321 @ngr={0}", ngr).ToListAsync();
+
+            return View(model);
+        }
     }
 }

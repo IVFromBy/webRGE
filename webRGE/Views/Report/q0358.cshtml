@@ -1,0 +1,58 @@
+﻿
+@model webRGE.ViewModels.q0358ViewModel
+@{
+    ViewBag.Title = "Отчёт: q0358 - Уставный фонд";
+}
+<p>Отчёт: q0358 Уставный фонд</p>
+  <table data-v-1aee17f6="" class="table table-bordered">
+            <thead data-v-1aee17f6="">
+                <tr data-v-1aee17f6="">
+                    <th data-v-1aee17f6="">C</th>
+                    <th data-v-1aee17f6="">ПО</th>
+                    <th data-v-1aee17f6="">VNTUFP</th>
+                    <th data-v-1aee17f6="">VNVSUFP</th>                     
+                    <th data-v-1aee17f6="">VNVALUTP</th>                     
+                    <th data-v-1aee17f6="">NUF</th>                     
+                    <th data-v-1aee17f6="">NUFI</th>                     
+                    <th data-v-1aee17f6="">NUFM</th>                     
+                    <th data-v-1aee17f6="">NDG</th>                     
+                    <th data-v-1aee17f6="">NDGI</th>                     
+                    <th data-v-1aee17f6="">NDGM</th>                     
+                    <th data-v-1aee17f6="">NSDII</th>                     
+                    <th data-v-1aee17f6="">NSPII</th>                     
+                    <th data-v-1aee17f6="">NSDBI</th>                     
+                    <th data-v-1aee17f6="">NSPBI</th>                     
+                    <th data-v-1aee17f6="">NUFAQ</th>                     
+                    <th data-v-1aee17f6="">NUFAM</th>                     
+                   
+                </tr>
+            </thead>            
+
+            @foreach (var item in @Model.Report)
+            {
+                
+                <tbody data-v-1aee17f6="">
+                    <tr data-v-1aee17f6="">
+                        <td data-v-1aee17f6="">@item.DFROM.ToString("dd.MM.yyyy")</td>
+                        <td data-v-1aee17f6="">@if(@item.DTO.HasValue ){@item.DTO.Value.ToString("dd.MM.yyyy")}</td>
+                        <td data-v-1aee17f6="">@item.VNTUFP</td>  
+                        <td data-v-1aee17f6="">@item.VNVSUFP</td>
+                        <td data-v-1aee17f6="">@item.VNVALUTP</td>
+                        <td data-v-1aee17f6="">@item.NUF</td>
+                        <td data-v-1aee17f6="">@item.NUFI</td>
+                        <td data-v-1aee17f6="">@item.NUFM</td>
+                        <td data-v-1aee17f6="">@item.NDG</td>
+                        <td data-v-1aee17f6="">@item.NDGI</td>
+                        <td data-v-1aee17f6="">@item.NDGM</td>
+                        <td data-v-1aee17f6="">@item.NSDII</td>
+                        <td data-v-1aee17f6="">@item.NSPII</td>
+                        <td data-v-1aee17f6="">@item.NSDBI</td>
+                        <td data-v-1aee17f6="">@item.NSPBI</td>
+                        <td data-v-1aee17f6="">@item.NUFAQ</td>
+                        <td data-v-1aee17f6="">@item.NUFAM</td>
+                        </tr>
+                </tbody>
+                
+            }
+
+        </table>

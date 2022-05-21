@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 using webRGE.Entities;
 using webRGE.Entities.Dictionary;
 using webRGE.Entities.Reports;
@@ -65,18 +66,43 @@ namespace webRGE.Context
         #endregion
 
         #region reports
+        [NotMapped]
         public DbSet<MainSearch> MainSearchs { get; set; }
+        [NotMapped]
         public DbSet<HistoryStatus> HistoryStatusReport { get; set; }
+        [NotMapped]
         public DbSet<HistoryName> HistoryNameReport { get; set; }
+        [NotMapped]
         public DbSet<HistoryManager> HistoryManagerReport { get; set; }
+        [NotMapped]
         public DbSet<ActivityTypeExt> ActivityTypeExtReport { get; set; }
+        [NotMapped]
         public DbSet<ActivityTypeExt2> ActivityTypeExt2Report { get; set; }
+        [NotMapped]
         public DbSet<ActivityTypeExt3> ActivityTypeExt3Report { get; set; }
+        [NotMapped]
         public DbSet<ActivityType> ActivityTypeReport { get; set; }
+        [NotMapped]
         public DbSet<ActivityTypeMain> ActivityTypeMainReport { get; set; }
+        [NotMapped]
         public DbSet<q0313> q0313Report { get; set; }
+        [NotMapped]
         public DbSet<q0355> q0355Report { get; set; }
+        [NotMapped]
+        public DbSet<q0357> q0357Report { get; set; }
+        [NotMapped]
+        public DbSet<q0358> q0358Report { get; set; }
+        [NotMapped]
+        public DbSet<q0321> q0321Report { get; set; }
+        [NotMapped]
+        public DbSet<q0360> q0360Report { get; set; }
+        [NotMapped]
+        public DbSet<q0303> q0303Report { get; set; }
+        [NotMapped]
+        public DbSet<q0301> q0301Report { get; set; }
+        [NotMapped]
         public DbSet<q0331> q0331Report { get; set; }
+        [NotMapped]
         public DbSet<SocNum> SocNumReport { get; set; }
 
         #endregion
@@ -84,7 +110,7 @@ namespace webRGE.Context
         public RgeDb(DbContextOptions<RgeDb> options) : base(options)
         {
             //Database.EnsureDeleted();
-           // Database.EnsureCreated();
+            //Database.EnsureCreated();
             
         }
         
