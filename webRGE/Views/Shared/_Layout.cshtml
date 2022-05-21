@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>Поиск РГЕ</title>
+    <title>@ViewBag.Title</title>
     <partial name="Partial/_Styles" />
     @await RenderSectionAsync("Styles",false)
 </head>
@@ -43,17 +43,17 @@
                         </a>
                     </li>
                     <li>
-                        <a asp-controller="Home" asp-action="Import">
+                        <a asp-controller="Report" asp-action="Index">
                             <img src="~/images/infoFromEgr0.png">
                             <span class="sdt_active"></span>
-                            <span class="sdt_wrap"> <span class="sdt_link" style=" text-align: center;     margin-top: -10px;">Импорт</span> <span class="sdt_descr"></span></span>
+                            <span class="sdt_wrap"> <span class="sdt_link" style=" text-align: center;     margin-top: -10px;">Отчёты</span> <span class="sdt_descr"></span></span>
                         </a>
                     </li>
                     <li>
-                        <a asp-controller="Report" asp-action="Index">
-                            <img src="~/images/">
+                        <a asp-controller="Home" asp-action="Import">
+                            <img src="~/images/60.jpg">
                             <span class="sdt_active"></span>
-                            <span class="sdt_wrap"> <span class="sdt_link" style=" text-align: center;     margin-top: -10px;">Отчёты</span> <span class="sdt_descr"></span></span>
+                            <span class="sdt_wrap"> <span class="sdt_link" style=" text-align: center;     margin-top: -10px;">Импорт</span> <span class="sdt_descr"></span></span>
                         </a>
                     </li>
                 </ul>

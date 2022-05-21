@@ -1,0 +1,85 @@
+﻿
+@model webRGE.ViewModels.HistoryManagerViewModel
+@{
+    ViewBag.Title = "Отчёт: история изменения управленцев";
+}
+<p>Отчёт: история изменения управленцев</p>
+  <table data-v-1aee17f6="" class="table table-bordered">
+            <thead data-v-1aee17f6="">
+                <tr data-v-1aee17f6="">
+                    <th data-v-1aee17f6="">C</th>
+                    <th data-v-1aee17f6="">ПО</th>
+                    <th data-v-1aee17f6="">ФИО</th>
+                    <th data-v-1aee17f6="">Должность</th>
+                    <th data-v-1aee17f6="">Документ</th>
+                    <th data-v-1aee17f6="">Страна</th>
+                    <th data-v-1aee17f6="">Индекс</th>
+                    <th data-v-1aee17f6="">SOATO</th>                    
+                    <th data-v-1aee17f6="">VNSFULL</th>                    
+                    <th data-v-1aee17f6="">VNTNPP</th>                    
+                    <th data-v-1aee17f6="">VNP</th>                    
+                    <th data-v-1aee17f6="">VNTULP</th>                    
+                    <th data-v-1aee17f6="">VULITSA</th>                    
+                    <th data-v-1aee17f6="">VDOM</th>                    
+                    <th data-v-1aee17f6="">VKORP</th>                    
+                    <th data-v-1aee17f6="">VPOM</th>                    
+                    <th data-v-1aee17f6="">VNTPOMP</th>                    
+                    <th data-v-1aee17f6="">VADRPRIM</th>                    
+                    <th data-v-1aee17f6="">VEMAIL</th>                    
+                    <th data-v-1aee17f6="">VTELWORK</th>                    
+                    <th data-v-1aee17f6="">VTELHOME</th>                    
+                    <th data-v-1aee17f6="">VTELSOT</th>                    
+                    <th data-v-1aee17f6="">VNVDOK</th>                    
+                    <th data-v-1aee17f6="">VDOCSER</th>                    
+                    <th data-v-1aee17f6="">VDOCNUM</th>                    
+                    <th data-v-1aee17f6="">DDOC</th>                    
+                    <th data-v-1aee17f6="">DDOCEND</th>                    
+                    <th data-v-1aee17f6="">VDOCORG</th>                    
+                    <th data-v-1aee17f6="">CLN</th>                    
+                    <th data-v-1aee17f6="">DR</th>                    
+                    <th data-v-1aee17f6="">VMR</th>                    
+                </tr>
+            </thead>
+            
+            @foreach (var item in @Model.Report)
+            {
+                
+                <tbody data-v-1aee17f6="">
+                    <tr data-v-1aee17f6="">
+                        <td data-v-1aee17f6="">@item.DFROM.ToString("dd.MM.yyyy")</td>
+                        <td data-v-1aee17f6="">@if(@item.DTO.HasValue ){@item.DTO.Value.ToString("dd.MM.yyyy")}</td>
+                        <td data-v-1aee17f6="">@item.VNAIM</td>                        
+                        <td data-v-1aee17f6="">@item.VNDOLGNP</td>
+                        <td data-v-1aee17f6="">@item.VNVDOCA</td>
+                        <td data-v-1aee17f6="">@item.VNSTRANP</td>
+                        <td data-v-1aee17f6="">@item.NINDEX</td>                                                                      
+                        <td data-v-1aee17f6="">@item.NKSOATO</td>
+                        <td data-v-1aee17f6="">@item.VNSFULL</td>
+                        <td data-v-1aee17f6="">@item.VNTNPP</td>
+                        <td data-v-1aee17f6="">@item.VNP</td>
+                        <td data-v-1aee17f6="">@item.VNTULP</td>
+                        <td data-v-1aee17f6="">@item.VULITSA</td>
+                        <td data-v-1aee17f6="">@item.VDOM</td>
+                        <td data-v-1aee17f6="">@item.VKORP</td>
+                        <td data-v-1aee17f6="">@item.VPOM</td>
+                        <td data-v-1aee17f6="">@item.VNTPOMP</td>
+                        <td data-v-1aee17f6="">@item.VADRPRIM</td>
+                        <td data-v-1aee17f6="">@item.VEMAIL</td>
+                        <td data-v-1aee17f6="">@item.VTELWORK</td>
+                        <td data-v-1aee17f6="">@item.VTELHOME</td>
+                        <td data-v-1aee17f6="">@item.VTELSOT</td>
+                        <td data-v-1aee17f6="">@item.VNVDOK</td>
+                        <td data-v-1aee17f6="">@item.VDOCSER</td>
+                        <td data-v-1aee17f6="">@item.VDOCNUM</td>
+                        <td data-v-1aee17f6="">@if(@item.DDOC.HasValue ){@item.DDOC.Value.ToString("dd.MM.yyyy")}</td>
+                        <td data-v-1aee17f6="">@if(@item.DDOCEND.HasValue ){@item.DDOCEND.Value.ToString("dd.MM.yyyy")}</td>
+                        <td data-v-1aee17f6="">@item.VDOCORG</td>
+                        <td data-v-1aee17f6="">@item.CLN</td>
+                        <td data-v-1aee17f6="">@if(@item.DR.HasValue ){@item.DR.Value.ToString("dd.MM.yyyy")}</td>
+                        <td data-v-1aee17f6="">@item.VMR</td>
+                        </tr>
+                </tbody>
+                
+            }
+
+        </table>

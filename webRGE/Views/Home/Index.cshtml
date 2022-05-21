@@ -1,5 +1,7 @@
 ﻿@model webRGE.ViewModels.Egr01NameViewModel
-
+@{
+    ViewBag.Title = "Поиск";
+}
 <div class="container">
     <div>
         <fieldset class="duration-200 ease-in-out">
@@ -39,25 +41,38 @@
 
             @foreach (var item in @Model.RegisterdUsers)
             {
-                
+
                 <tbody data-v-1aee17f6="">
                     <tr data-v-1aee17f6="">
-                        
+
                         <td data-v-1aee17f6="">@item.NGRN</td>
-                        <td data-v-1aee17f6=""><p data-v-1aee17f6="">@if (!string.IsNullOrEmpty( @item.VFIO)){@item.VFIO}else{@item.VN}</p></td>
-                        
+                        <td data-v-1aee17f6=""><p data-v-1aee17f6="">@if (!string.IsNullOrEmpty(@item.VFIO))
+                                {
+                                    @item.VFIO
+                                }
+                                else
+                                {
+                                    @item.VN
+                                }</p></td>
+
                         <td data-v-1aee17f6="">
-                            <p data-v-1aee17f6="">@if(@item.DFROM.HasValue ){@item.DFROM.Value.ToString("dd.MM.yyyy")}</p>
-                         </td>
+                            <p data-v-1aee17f6="">@if (@item.DFROM.HasValue)
+                                {
+                                    @item.DFROM.Value.ToString("dd.MM.yyyy")
+                                }</p>
+                        </td>
                         <td data-v-1aee17f6="">@item.VNSOSTK</td>
 
-                         <td data-v-1aee17f6="">@if(@item.DTO.HasValue ){@item.DTO.Value.ToString("dd.MM.yyyy") }</td>
+                        <td data-v-1aee17f6="">@if (@item.DTO.HasValue)
+                            {
+                                @item.DTO.Value.ToString("dd.MM.yyyy")
+                            }</td>
                         <td data-v-1aee17f6="">
-                            <a data-v-1aee17f6="" asp-action="Index" asp-controller="Report" asp-route-RegNum ="@item.NGRN" target="_blank" class="mb-3"> Дополнительная информация по субъекту </a>
+                            <a data-v-1aee17f6="" asp-action="Index" asp-controller="Report" asp-route-RegNum="@item.NGRN" target="_blank" class="mb-3"> Дополнительная информация по субъекту </a>
                         </td>
-                        </tr>
+                    </tr>
                 </tbody>
-                
+
             }
 
         </table>

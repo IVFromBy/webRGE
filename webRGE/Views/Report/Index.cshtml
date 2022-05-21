@@ -2,23 +2,37 @@
     ViewBag.Title = "Отчёты";
 }
 @model int?
-<div>
-    <p><strong>Отчёты</strong></p>
+<div>    
     <form class="mt-6 mb-12">
-        <div class="relative mb-4" placeholder="XXXXXXXXX (9 цифр). Например: 123456789">
-            <label class="leading-7 text-base text-gray-800"> Регистрационный номер </label>
-            <input name="RegNum" placeholder="XXXXXXXXX (9 цифр). Например: 123456789" 
-            class="w-full bg-white rounded border border-gray-500 text-base outline-none text-gray-800 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out focus:border-blue-600"
-            value=@Model>
-        </div>
+        @if(@Model != null)
+        {<p><strong>Отчёты для </strong></p>
+            <div class="relative mb-4">
+                <label class="leading-7 text-base text-gray-800"> Регистрационный номер </label>
+            <label name="RegNum" >@Model</label>
+          </div>
+        }
+        else
+        {       <p><strong>Отчёты</strong></p>
+        }
 
     </form>
-    <p>Доступные отчёты</p>
-                    <div class="text-xs"><p class="mb-1"></div>
-                <div class="flex justify-center mt-8">
-                    
-                    <p><a data-v-1aee17f6="" asp-action="HistoryStatus" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> История изменения статуса </a></p>
-                    <p><a data-v-1aee17f6="" asp-action="HistoryName" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> История изменения наименования </a></p>
-                    
-                </div>
+    <p>Доступные отчёты</p>    
+    <div class="text-xs"><p class="mb-1"></div>
+    <div class="flex justify-center mt-8">
+
+        <p><a data-v-1aee17f6="" asp-action="HistoryStatus" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> История изменения статуса </a></p>
+        <p><a data-v-1aee17f6="" asp-action="HistoryName" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> История изменения наименования </a></p>
+        <p><a data-v-1aee17f6="" asp-action="HistoryManager" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> История изменения управленцев </a></p>
+        <p><a data-v-1aee17f6="" asp-action="ActivityTypeMain" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> Вид основной деятельности</a></p>
+        <p><a data-v-1aee17f6="" asp-action="ActivityType" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> Виды деятельности</a></p>
+        <p><a data-v-1aee17f6="" asp-action="ActivityTypeExt" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> Виды деятельности (Дополнительные) </a></p>
+        <p><a data-v-1aee17f6="" asp-action="ActivityTypeExt2" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> Виды деятельности (Дополнительные №2) </a></p>
+        <p><a data-v-1aee17f6="" asp-action="ActivityTypeExt3" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> Виды деятельности (Дополнительные №3) </a></p>
+        <p><a data-v-1aee17f6="" asp-action="SocNum" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> Соц номера (для ип) </a></p>
+<br/>
+<p>Отчёты с непонятным содержанием</p>
+        <p><a data-v-1aee17f6="" asp-action="q0313" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> q0313</a></p>
+        <p><a data-v-1aee17f6="" asp-action="q0355" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> q0355</a></p>
+        <p><a data-v-1aee17f6="" asp-action="q0331" asp-controller="Report" asp-route-ngr="@Model" target="_blank" class="mb-3"> q0331</a></p>
+    </div>
 </div>

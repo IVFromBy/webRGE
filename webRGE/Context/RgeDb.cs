@@ -68,6 +68,16 @@ namespace webRGE.Context
         public DbSet<MainSearch> MainSearchs { get; set; }
         public DbSet<HistoryStatus> HistoryStatusReport { get; set; }
         public DbSet<HistoryName> HistoryNameReport { get; set; }
+        public DbSet<HistoryManager> HistoryManagerReport { get; set; }
+        public DbSet<ActivityTypeExt> ActivityTypeExtReport { get; set; }
+        public DbSet<ActivityTypeExt2> ActivityTypeExt2Report { get; set; }
+        public DbSet<ActivityTypeExt3> ActivityTypeExt3Report { get; set; }
+        public DbSet<ActivityType> ActivityTypeReport { get; set; }
+        public DbSet<ActivityTypeMain> ActivityTypeMainReport { get; set; }
+        public DbSet<q0313> q0313Report { get; set; }
+        public DbSet<q0355> q0355Report { get; set; }
+        public DbSet<q0331> q0331Report { get; set; }
+        public DbSet<SocNum> SocNumReport { get; set; }
 
         #endregion
 

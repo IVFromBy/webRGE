@@ -1,0 +1,32 @@
+﻿
+@model webRGE.ViewModels.SocNumViewModel
+@{
+    ViewBag.Title = "Отчёт: СоцНомер";
+}
+<p>Отчёт: Соцномер</p>
+  <table data-v-1aee17f6="" class="table table-bordered">
+            <thead data-v-1aee17f6="">
+                <tr data-v-1aee17f6="">
+                    <th data-v-1aee17f6="">C</th>
+                    <th data-v-1aee17f6="">ПО</th>
+                    <th data-v-1aee17f6="">Соц. номер</th>
+                    <th data-v-1aee17f6="">DOPINFO</th>
+                     
+                </tr>
+            </thead>
+            
+            @foreach (var item in @Model.Report)
+            {
+                
+                <tbody data-v-1aee17f6="">
+                    <tr data-v-1aee17f6="">
+                        <td data-v-1aee17f6="">@item.DFROM.ToString("dd.MM.yyyy")</td>
+                        <td data-v-1aee17f6="">@if(@item.DTO.HasValue ){@item.DTO.Value.ToString("dd.MM.yyyy")}</td>
+                        <td data-v-1aee17f6="">@item.VSOC</td>  
+                        <td data-v-1aee17f6="">@item.DOPINFO</td>                                                                     
+                        </tr>
+                </tbody>
+                
+            }
+
+        </table>

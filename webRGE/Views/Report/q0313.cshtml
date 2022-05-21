@@ -1,0 +1,81 @@
+﻿
+@model webRGE.ViewModels.q0313ViewModel
+@{
+    ViewBag.Title = "Отчёт: q0313";
+}
+<p>Отчёт: q0313</p>
+  <table data-v-1aee17f6="" class="table table-bordered">
+            <thead data-v-1aee17f6="">
+                <tr data-v-1aee17f6="">
+                    <th data-v-1aee17f6="">C</th>
+                    <th data-v-1aee17f6="">ПО</th>
+                    <th data-v-1aee17f6="">NUNN</th>
+                    <th data-v-1aee17f6="">VNAIM</th>
+                    <th data-v-1aee17f6="">VNAIMB</th>
+                    <th data-v-1aee17f6="">VN</th>
+                    <th data-v-1aee17f6="">VNB</th>
+                    <th data-v-1aee17f6="">VFN</th>                    
+                    <th data-v-1aee17f6="">VFNB</th>                    
+                    <th data-v-1aee17f6="">VNSTRANP</th>                    
+                    <th data-v-1aee17f6="">NINDEX</th>                    
+                    <th data-v-1aee17f6="">NKSOATO</th>                    
+                    <th data-v-1aee17f6="">VNSFULL</th>                    
+                    <th data-v-1aee17f6="">ATE</th>                    
+                    <th data-v-1aee17f6="">VREGION</th>                    
+                    <th data-v-1aee17f6="">VDISTRICT</th>                    
+                    <th data-v-1aee17f6="">VNTNPP</th>                    
+                    <th data-v-1aee17f6="">VNP</th>                    
+                    <th data-v-1aee17f6="">VNTULP</th>                    
+                    <th data-v-1aee17f6="">VULITSA</th>                    
+                    <th data-v-1aee17f6="">VDOM</th>                    
+                    <th data-v-1aee17f6="">VKORP</th>                    
+                    <th data-v-1aee17f6="">VPOM</th>                    
+                    <th data-v-1aee17f6="">VNTPOMP</th>                    
+                    <th data-v-1aee17f6="">VADRPRIM</th>                    
+                    <th data-v-1aee17f6="">VEMAIL</th>                    
+                    <th data-v-1aee17f6="">VTELS</th>                    
+                    <th data-v-1aee17f6="">VPRIM</th>                    
+                    
+                </tr>
+            </thead>
+            
+            @foreach (var item in @Model.Report)
+            {
+                
+                <tbody data-v-1aee17f6="">
+                    <tr data-v-1aee17f6="">
+                        <td data-v-1aee17f6="">@item.DFROM.ToString("dd.MM.yyyy")</td>
+                        <td data-v-1aee17f6="">@if(@item.DTO.HasValue ){@item.DTO.Value.ToString("dd.MM.yyyy")}</td>
+                        <td data-v-1aee17f6="">@item.NUNN</td>                        
+                        <td data-v-1aee17f6="">@item.VNAIM</td>
+                        <td data-v-1aee17f6="">@item.VNAIMB</td>
+                        <td data-v-1aee17f6="">@item.VN</td>
+                        <td data-v-1aee17f6="">@item.VNB</td>
+                        <td data-v-1aee17f6="">@item.VFN</td>
+                        <td data-v-1aee17f6="">@item.VFNB</td>
+                        <td data-v-1aee17f6="">@item.VNSTRANP</td>
+                        <td data-v-1aee17f6="">@item.NINDEX</td>
+                        <td data-v-1aee17f6="">@item.NKSOATO</td>
+                        <td data-v-1aee17f6="">@item.VNSFULL</td>
+                        <td data-v-1aee17f6="">@item.ATE</td>
+                        <td data-v-1aee17f6="">@item.VREGION</td>
+                        <td data-v-1aee17f6="">@item.VDISTRICT</td>
+                        <td data-v-1aee17f6="">@item.VNTNPP</td>
+                        <td data-v-1aee17f6="">@item.VNP</td>
+                        <td data-v-1aee17f6="">@item.VNTULP</td>
+                        <td data-v-1aee17f6="">@item.VULITSA</td>
+                        <td data-v-1aee17f6="">@item.VDOM</td>
+                        <td data-v-1aee17f6="">@item.VKORP</td>
+                        <td data-v-1aee17f6="">@item.VPOM</td>
+                        <td data-v-1aee17f6="">@item.VNTPOMP</td>
+                        <td data-v-1aee17f6="">@item.VADRPRIM</td>
+                        <td data-v-1aee17f6="">@item.VEMAIL</td>
+                        <td data-v-1aee17f6="">@item.VTELS</td>
+                        <td data-v-1aee17f6="">@item.VPRIM</td>
+
+                        </tr>
+                </tbody>
+                
+            }
+
+        </table>

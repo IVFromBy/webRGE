@@ -1,0 +1,30 @@
+﻿
+@model webRGE.ViewModels.ActivityTypeMainViewModel
+@{
+    ViewBag.Title = "Отчёт: Виды деятельности (дополнительные)";
+}
+<p>Отчёт: Виды деятельности (дополнительные)</p>
+  <table data-v-1aee17f6="" class="table table-bordered">
+            <thead data-v-1aee17f6="">
+                <tr data-v-1aee17f6="">
+                    <th data-v-1aee17f6="">C</th>
+                    <th data-v-1aee17f6="">ПО</th>
+                    <th data-v-1aee17f6="">Вид деятельности</th>
+                     
+                </tr>
+            </thead>
+            
+            @foreach (var item in @Model.Report)
+            {
+                
+                <tbody data-v-1aee17f6="">
+                    <tr data-v-1aee17f6="">
+                        <td data-v-1aee17f6="">@item.DFROM.ToString("dd.MM.yyyy")</td>
+                        <td data-v-1aee17f6="">@if(@item.DTO.HasValue ){@item.DTO.Value.ToString("dd.MM.yyyy")}</td>
+                        <td data-v-1aee17f6="">@item.VNVDNP</td>                                               
+                        </tr>
+                </tbody>
+                
+            }
+
+        </table>
