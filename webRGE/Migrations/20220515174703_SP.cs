@@ -6,7 +6,7 @@ namespace webRGE.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.Sql(@"CREATE NONCLUSTERED INDEX [idx_EGR04D_f] ON [dbo].[EGR04D] ( [NGR04001] ASC, [NGR04004A] ASC)");
+            migrationBuilder.Sql(@"CREATE NONCLUSTERED INDEX [idx_EGR04D_f] ON [EGR04D] ( [NGR04001] ASC, [NGR04004A] ASC)");
 
             migrationBuilder.Sql(@"create or alter procedure mainSearch(@ngr int=null, @nm nvarchar(40) = null)
                     as
@@ -61,7 +61,7 @@ namespace webRGE.Migrations
                     ORDER BY DFROM 
              END");
 
-            migrationBuilder.Sql(@"CREATE OR ALTER PROCEDURE [dbo].[HistoryManager]
+            migrationBuilder.Sql(@"CREATE OR ALTER PROCEDURE [HistoryManager]
                                       @ngr int
                                     AS
                                     BEGIN
@@ -288,7 +288,7 @@ namespace webRGE.Migrations
                                            where e1.ngrn = @ngr 
                                    		order by e1.DFROM
                                    END");
-            migrationBuilder.Sql(@"create or ALTER PROCEDURE [dbo].[HistoryName]
+            migrationBuilder.Sql(@"create or ALTER PROCEDURE [HistoryName]
                                     @ngr int
                                     AS
                                     BEGIN
